@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Ex01_1
 {
@@ -23,6 +24,34 @@ namespace Ex01_1
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void setNameButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                StreamWriter sw = new StreamWriter("username.txt");
+                sw.WriteLine(usernameTextBox.Text);
+                sw.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void retNameButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                StreamReader sr = new StreamReader("username.txt");
+                greetingsLabel.Content = "Welcome, " + sr.ReadLine() + "!";
+                sr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
