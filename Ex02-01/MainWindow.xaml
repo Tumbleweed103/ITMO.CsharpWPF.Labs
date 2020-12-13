@@ -1,0 +1,22 @@
+﻿<Window TextBoxBase.TextChanged="Window_TextChanged" x:Class="Ex02_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex02_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="116.772" Width="357.118">
+    <Grid TextBoxBase.TextChanged="Grid_TextChanged">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="58*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <RadioButton x:Name="radBut1" Content="Handle TextBox event" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="15" Width="141"/>
+        <RadioButton x:Name="radBut2" Content="Handle Grid event" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="15" Width="141"/>
+        <RadioButton x:Name="radBut3" Content="Handle Window event" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="15" Width="141"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="6.2,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" TextChanged="TextBox_TextChanged"/>
+    </Grid>
+</Window>

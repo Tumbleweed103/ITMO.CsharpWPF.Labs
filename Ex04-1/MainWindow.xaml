@@ -1,0 +1,19 @@
+﻿<Window x:Class="Ex04_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex04_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="173.114" Width="359.481">
+    <Grid Margin="0,0,-0.2,0.2">
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,12,0,0" TextWrapping="Wrap" Name="txtFirstName" VerticalAlignment="Top" Width="250"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,40,0,0" TextWrapping="Wrap" Name="txtLastName" VerticalAlignment="Top" Width="250"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="85,68,0,0" TextWrapping="Wrap" Name="txtEmail" VerticalAlignment="Top" Width="250"/>
+        <Label Content="_First name" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Height="26" Width="70" Target="{Binding ElementName=txtFirstName, Mode=OneWay}"/>
+        <Label Content="_Last name" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Height="26" Width="70" Target="{Binding ElementName=txtLastName, Mode=OneWay}"/>
+        <Label Content="_Email" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Height="26" Width="70" RenderTransformOrigin="1.274,0.846" Target="{Binding ElementName=txtEmail, Mode=OneWay}"/>
+        <Button Content="_Submit" HorizontalAlignment="Left" Margin="27,108,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="19"/>
+
+    </Grid>
+</Window>
